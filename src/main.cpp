@@ -2,14 +2,25 @@
 #include <tl/expected.hpp>
 #include <tuntap++.hh>
 
+constexpr int TunBufSize = 1055;
+
 int main(int, char**) {
 
     tuntap::tun tun;
 
     while (true) {
-        std::string packet(1504, 0);
-        tun.read((void*)packet.c_str(), packet.size());
+        char buf[TunBufSize] = {0};
 
-        std::cout << packet << "\n";
+        int readBytes = tun.read(buf, TunBufSize);
+        if (readBytes == -1) {
+            continue;
+        }
+        buf[readBytes] = 0;
+
+        std::cout << "Request (size: " << readBytes << "):\n";
+        for (int i = 0; i < readBytes; i++) {
+            std::cout << buf[i];
+        }
+        std::cout << "\n";
     }
 }
