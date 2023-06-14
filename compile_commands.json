@@ -1,0 +1,322 @@
+[
+{
+  "directory": "/Users/prince/projects/netstack/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/expected/include -I/Users/prince/projects/netstack/dependencies/libtuntap/bindings/cpp -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++2b -o CMakeFiles/netstack.dir/src/main.cpp.o -c /Users/prince/projects/netstack/src/main.cpp",
+  "file": "/Users/prince/projects/netstack/src/main.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/expected",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/prince/projects/netstack/build/_deps/catch2-src/single_include -I/Users/prince/projects/netstack/dependencies/expected/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wall -Wextra -std=gnu++2b -o CMakeFiles/tl-expected-tests.dir/tests/assertions.cpp.o -c /Users/prince/projects/netstack/dependencies/expected/tests/assertions.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/expected/tests/assertions.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/expected",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/prince/projects/netstack/build/_deps/catch2-src/single_include -I/Users/prince/projects/netstack/dependencies/expected/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wall -Wextra -std=gnu++2b -o CMakeFiles/tl-expected-tests.dir/tests/assignment.cpp.o -c /Users/prince/projects/netstack/dependencies/expected/tests/assignment.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/expected/tests/assignment.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/expected",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/prince/projects/netstack/build/_deps/catch2-src/single_include -I/Users/prince/projects/netstack/dependencies/expected/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wall -Wextra -std=gnu++2b -o CMakeFiles/tl-expected-tests.dir/tests/bases.cpp.o -c /Users/prince/projects/netstack/dependencies/expected/tests/bases.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/expected/tests/bases.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/expected",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/prince/projects/netstack/build/_deps/catch2-src/single_include -I/Users/prince/projects/netstack/dependencies/expected/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wall -Wextra -std=gnu++2b -o CMakeFiles/tl-expected-tests.dir/tests/constexpr.cpp.o -c /Users/prince/projects/netstack/dependencies/expected/tests/constexpr.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/expected/tests/constexpr.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/expected",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/prince/projects/netstack/build/_deps/catch2-src/single_include -I/Users/prince/projects/netstack/dependencies/expected/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wall -Wextra -std=gnu++2b -o CMakeFiles/tl-expected-tests.dir/tests/constructors.cpp.o -c /Users/prince/projects/netstack/dependencies/expected/tests/constructors.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/expected/tests/constructors.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/expected",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/prince/projects/netstack/build/_deps/catch2-src/single_include -I/Users/prince/projects/netstack/dependencies/expected/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wall -Wextra -std=gnu++2b -o CMakeFiles/tl-expected-tests.dir/tests/emplace.cpp.o -c /Users/prince/projects/netstack/dependencies/expected/tests/emplace.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/expected/tests/emplace.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/expected",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/prince/projects/netstack/build/_deps/catch2-src/single_include -I/Users/prince/projects/netstack/dependencies/expected/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wall -Wextra -std=gnu++2b -o CMakeFiles/tl-expected-tests.dir/tests/extensions.cpp.o -c /Users/prince/projects/netstack/dependencies/expected/tests/extensions.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/expected/tests/extensions.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/expected",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/prince/projects/netstack/build/_deps/catch2-src/single_include -I/Users/prince/projects/netstack/dependencies/expected/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wall -Wextra -std=gnu++2b -o CMakeFiles/tl-expected-tests.dir/tests/issues.cpp.o -c /Users/prince/projects/netstack/dependencies/expected/tests/issues.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/expected/tests/issues.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/expected",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/prince/projects/netstack/build/_deps/catch2-src/single_include -I/Users/prince/projects/netstack/dependencies/expected/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wall -Wextra -std=gnu++2b -o CMakeFiles/tl-expected-tests.dir/tests/main.cpp.o -c /Users/prince/projects/netstack/dependencies/expected/tests/main.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/expected/tests/main.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/expected",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/prince/projects/netstack/build/_deps/catch2-src/single_include -I/Users/prince/projects/netstack/dependencies/expected/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wall -Wextra -std=gnu++2b -o CMakeFiles/tl-expected-tests.dir/tests/noexcept.cpp.o -c /Users/prince/projects/netstack/dependencies/expected/tests/noexcept.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/expected/tests/noexcept.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/expected",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/prince/projects/netstack/build/_deps/catch2-src/single_include -I/Users/prince/projects/netstack/dependencies/expected/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wall -Wextra -std=gnu++2b -o CMakeFiles/tl-expected-tests.dir/tests/observers.cpp.o -c /Users/prince/projects/netstack/dependencies/expected/tests/observers.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/expected/tests/observers.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/expected",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/prince/projects/netstack/build/_deps/catch2-src/single_include -I/Users/prince/projects/netstack/dependencies/expected/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wall -Wextra -std=gnu++2b -o CMakeFiles/tl-expected-tests.dir/tests/relops.cpp.o -c /Users/prince/projects/netstack/dependencies/expected/tests/relops.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/expected/tests/relops.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/expected",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/prince/projects/netstack/build/_deps/catch2-src/single_include -I/Users/prince/projects/netstack/dependencies/expected/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wall -Wextra -std=gnu++2b -o CMakeFiles/tl-expected-tests.dir/tests/swap.cpp.o -c /Users/prince/projects/netstack/dependencies/expected/tests/swap.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/expected/tests/swap.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -o CMakeFiles/tuntap.dir/tuntap.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/tuntap.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/tuntap.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -o CMakeFiles/tuntap.dir/tuntap_log.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/tuntap_log.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/tuntap_log.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -o CMakeFiles/tuntap.dir/tuntap-unix.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/tuntap-unix.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/tuntap-unix.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -o CMakeFiles/tuntap.dir/tuntap-unix-darwin.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/tuntap-unix-darwin.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/tuntap-unix-darwin.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -o CMakeFiles/tuntap.dir/tuntap-unix-bsd.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/tuntap-unix-bsd.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/tuntap-unix-bsd.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/bindings/cpp",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap/bindings/cpp -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++11 -o CMakeFiles/tuntap++.dir/tuntap++.cc.o -c /Users/prince/projects/netstack/dependencies/libtuntap/bindings/cpp/tuntap++.cc",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/bindings/cpp/tuntap++.cc"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test01.dir/test01.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test01.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test01.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test02.dir/test02.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test02.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test02.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test03.dir/test03.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test03.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test03.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test04.dir/test04.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test04.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test04.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test05.dir/test05.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test05.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test05.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test06.dir/test06.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test06.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test06.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test07.dir/test07.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test07.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test07.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test08.dir/test08.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test08.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test08.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test09.dir/test09.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test09.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test09.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test10.dir/test10.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test10.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test10.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test11.dir/test11.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test11.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test11.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test12.dir/test12.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test12.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test12.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test13.dir/test13.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test13.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test13.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test14.dir/test14.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test14.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test14.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test17.dir/test17.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test17.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test17.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test18.dir/test18.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test18.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test18.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test21.dir/test21.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test21.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test21.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test22.dir/test22.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test22.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test22.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test23.dir/test23.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test23.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test23.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test24.dir/test24.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test24.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test24.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test25.dir/test25.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test25.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test25.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test26.dir/test26.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test26.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test26.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test29.dir/test29.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test29.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test29.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test30.dir/test30.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test30.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test30.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test31.dir/test31.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test31.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test31.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test32.dir/test32.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test32.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test32.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test37.dir/test37.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test37.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test37.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test38.dir/test38.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test38.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test38.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test39.dir/test39.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test39.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test39.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test40.dir/test40.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test40.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test40.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test41.dir/test41.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test41.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test41.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test42.dir/test42.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test42.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test42.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test43.dir/test43.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test43.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test43.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test44.dir/test44.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test44.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test44.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test45.dir/test45.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test45.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test45.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/test46.dir/test46.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/test46.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/test46.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/helper33.dir/helper33.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/helper33.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/helper33.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/helper34.dir/helper34.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/helper34.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/helper34.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/helper35.dir/helper35.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/helper35.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/helper35.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/helper36.dir/helper36.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/helper36.c",
+  "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/helper36.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/googletest/googlemock",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/prince/projects/netstack/dependencies/googletest/googlemock/include -I/Users/prince/projects/netstack/dependencies/googletest/googlemock -isystem /Users/prince/projects/netstack/dependencies/googletest/googletest/include -isystem /Users/prince/projects/netstack/dependencies/googletest/googletest  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk  -DGTEST_HAS_PTHREAD=1   -std=c++2b -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /Users/prince/projects/netstack/dependencies/googletest/googlemock/src/gmock-all.cc",
+  "file": "/Users/prince/projects/netstack/dependencies/googletest/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/googletest/googlemock",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -isystem /Users/prince/projects/netstack/dependencies/googletest/googlemock/include -isystem /Users/prince/projects/netstack/dependencies/googletest/googlemock -isystem /Users/prince/projects/netstack/dependencies/googletest/googletest/include -isystem /Users/prince/projects/netstack/dependencies/googletest/googletest  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk  -DGTEST_HAS_PTHREAD=1   -std=c++2b -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /Users/prince/projects/netstack/dependencies/googletest/googlemock/src/gmock_main.cc",
+  "file": "/Users/prince/projects/netstack/dependencies/googletest/googlemock/src/gmock_main.cc"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/googletest/googletest",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/prince/projects/netstack/dependencies/googletest/googletest/include -I/Users/prince/projects/netstack/dependencies/googletest/googletest  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk  -DGTEST_HAS_PTHREAD=1   -std=c++2b -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /Users/prince/projects/netstack/dependencies/googletest/googletest/src/gtest-all.cc",
+  "file": "/Users/prince/projects/netstack/dependencies/googletest/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/googletest/googletest",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -isystem /Users/prince/projects/netstack/dependencies/googletest/googletest/include -isystem /Users/prince/projects/netstack/dependencies/googletest/googletest  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk  -DGTEST_HAS_PTHREAD=1   -std=c++2b -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /Users/prince/projects/netstack/dependencies/googletest/googletest/src/gtest_main.cc",
+  "file": "/Users/prince/projects/netstack/dependencies/googletest/googletest/src/gtest_main.cc"
+}
+]

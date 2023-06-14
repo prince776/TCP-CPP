@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Clean",
+      "type": "shell",
+      "command": "bash",
+      "args": ["${workspaceFolder}/clean.sh"]
+    },
+    {
+      "label": "Debug Build",
+      "type": "shell",
+      "command": "bash",
+      "args": ["${workspaceFolder}/build.sh"]
+    },
+    {
+      "label": "Release Build",
+      "type": "shell",
+      "command": "bash",
+      "args": ["${workspaceFolder}/build.sh", "-c", "Release"]
+    },
+    {
+      "label": "Run",
+      "type": "shell",
+      "command": "bash",
+      "args": ["${workspaceFolder}/run.sh"]
+    },
+    {
+      "label": "Debug Build & Run",
+      "type": "shell",
+      "dependsOn": ["Debug Build", "Run"],
+      "dependsOrder": "sequence"
+    },
+    {
+      "label": "Release Build & Run",
+      "type": "shell",
+      "dependsOn": ["Release Build", "Run"],
+      "dependsOrder": "sequence"
+    }
+  ]
+}
