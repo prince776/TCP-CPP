@@ -44,5 +44,12 @@ int main(int, char**) {
 
         std::cout << "Src port: " << tcp->sport() << "\n";
         std::cout << "Dst port: " << tcp->dport() << "\n";
+
+        auto dataOffset = ip.header_size() + tcp->header_size();
+        std::cout << "TCP packet (size: " << readBytes - dataOffset << "):\n";
+        for (size_t i = dataOffset; i < (size_t)readBytes; i++) {
+            std::cout << buf[i];
+        }
+        std::cout << "\n";
     }
 }
