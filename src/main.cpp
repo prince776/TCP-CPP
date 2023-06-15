@@ -1,11 +1,17 @@
+#include "tins/ip.h"
+#include "tins/pdu.h"
+#include "tins/rawpdu.h"
+#include "tins/tcp.h"
+#include <iomanip>
 #include <iostream>
+#include <stdint.h>
 #include <tl/expected.hpp>
 #include <tuntap++.hh>
 
-constexpr int TunBufSize = 1055;
+constexpr int TunBufSize            = 1055;
+constexpr int TCPProtocolNumberInIP = 6;
 
 int main(int, char**) {
-
     tuntap::tun tun;
 
     while (true) {
@@ -17,10 +23,26 @@ int main(int, char**) {
         }
         buf[readBytes] = 0;
 
-        std::cout << "Request (size: " << readBytes << "):\n";
-        for (int i = 0; i < readBytes; i++) {
-            std::cout << buf[i];
+        Tins::IP ip((uint8_t*)buf, readBytes);
+
+        if (ip.protocol() != TCPProtocolNumberInIP) {
+            std::cout << "Skipping non TCP packet\n";
+            continue;
         }
-        std::cout << "\n";
+
+        std::cout << "Got IP Packet:\n";
+        std::cout << "Src addr: " << ip.src_addr() << "\n";
+        std::cout << "Dest addr: " << ip.dst_addr() << "\n";
+        std::cout << "Protocol: TCP\n";
+        std::cout << "Payload size: " << ip.advertised_size() << "\n";
+
+        const Tins::TCP* tcp = ip.find_pdu<Tins::TCP>();
+        if (!tcp) {
+            std::cout << "Failed to get TCP PDU\n";
+            continue;
+        }
+
+        std::cout << "Src port: " << tcp->sport() << "\n";
+        std::cout << "Dst port: " << tcp->dport() << "\n";
     }
 }

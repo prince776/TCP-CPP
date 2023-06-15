@@ -7,3 +7,6 @@
 [submodule "libtuntap"]
 	path = dependencies/libtuntap
 	url = https://github.com/LaKabane/libtuntap
+[submodule "dependencies/libtins"]
+	path = dependencies/libtins
+	url = https://github.com/mfontanini/libtins.git

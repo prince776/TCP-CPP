@@ -1,7 +1,7 @@
 [
 {
   "directory": "/Users/prince/projects/netstack/build",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/expected/include -I/Users/prince/projects/netstack/dependencies/libtuntap/bindings/cpp -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++2b -o CMakeFiles/netstack.dir/src/main.cpp.o -c /Users/prince/projects/netstack/src/main.cpp",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/expected/include -I/Users/prince/projects/netstack/dependencies/libtuntap/bindings/cpp -I/Users/prince/projects/netstack/dependencies/libtins/include -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++2b -o CMakeFiles/netstack.dir/src/main.cpp.o -c /Users/prince/projects/netstack/src/main.cpp",
   "file": "/Users/prince/projects/netstack/src/main.cpp"
 },
 {
@@ -298,6 +298,451 @@
   "directory": "/Users/prince/projects/netstack/build/dependencies/libtuntap/regress",
   "command": "/Library/Developer/CommandLineTools/usr/bin/cc -DDarwin -DUnix -I/Users/prince/projects/netstack/dependencies/libtuntap -I/Users/prince/projects/netstack/build/dependencies/libtuntap -I/usr/local/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/helper36.dir/helper36.c.o -c /Users/prince/projects/netstack/dependencies/libtuntap/regress/helper36.c",
   "file": "/Users/prince/projects/netstack/dependencies/libtuntap/regress/helper36.c"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/address_range.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/address_range.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/address_range.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/arp.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/arp.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/arp.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/bootp.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/bootp.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/bootp.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/crypto.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/crypto.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/crypto.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/detail/address_helpers.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/detail/address_helpers.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/detail/address_helpers.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/detail/icmp_extension_helpers.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/detail/icmp_extension_helpers.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/detail/icmp_extension_helpers.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/detail/pdu_helpers.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/detail/pdu_helpers.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/detail/pdu_helpers.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/detail/sequence_number_helpers.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/detail/sequence_number_helpers.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/detail/sequence_number_helpers.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/dhcp.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/dhcp.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/dhcp.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/dhcpv6.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/dhcpv6.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/dhcpv6.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/dns.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/dns.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/dns.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/dot3.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/dot3.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/dot3.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/dot1q.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/dot1q.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/dot1q.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/eapol.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/eapol.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/eapol.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/ethernetII.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/ethernetII.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/ethernetII.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/handshake_capturer.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/handshake_capturer.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/handshake_capturer.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/hw_address.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/hw_address.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/hw_address.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/icmp_extension.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/icmp_extension.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/icmp_extension.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/icmp.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/icmp.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/icmp.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/icmpv6.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/icmpv6.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/icmpv6.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/ip_reassembler.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/ip_reassembler.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/ip_reassembler.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/ip.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/ip.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/ip.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/ip_address.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/ip_address.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/ip_address.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/ipv6.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/ipv6.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/ipv6.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/ipv6_address.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/ipv6_address.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/ipv6_address.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/ipsec.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/ipsec.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/ipsec.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/llc.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/llc.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/llc.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/loopback.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/loopback.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/loopback.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/mpls.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/mpls.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/mpls.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/memory_helpers.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/memory_helpers.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/memory_helpers.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/network_interface.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/network_interface.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/network_interface.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/packet_sender.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/packet_sender.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/packet_sender.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/pdu.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/pdu.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/pdu.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/pdu_iterator.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/pdu_iterator.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/pdu_iterator.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/pdu_option.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/pdu_option.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/pdu_option.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/pppoe.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/pppoe.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/pppoe.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/radiotap.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/radiotap.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/radiotap.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/rawpdu.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/rawpdu.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/rawpdu.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/rsn_information.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/rsn_information.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/rsn_information.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/sll.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/sll.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/sll.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/snap.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/snap.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/snap.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/stp.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/stp.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/stp.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/tcp.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/tcp.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/tcp.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/tcp_ip/ack_tracker.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/tcp_ip/ack_tracker.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/tcp_ip/ack_tracker.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/tcp_ip/flow.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/tcp_ip/flow.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/tcp_ip/flow.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/tcp_ip/data_tracker.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/tcp_ip/data_tracker.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/tcp_ip/data_tracker.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/tcp_ip/stream.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/tcp_ip/stream.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/tcp_ip/stream.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/tcp_ip/stream_follower.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/tcp_ip/stream_follower.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/tcp_ip/stream_follower.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/tcp_ip/stream_identifier.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/tcp_ip/stream_identifier.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/tcp_ip/stream_identifier.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/timestamp.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/timestamp.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/timestamp.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/udp.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/udp.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/udp.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/utils/checksum_utils.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/utils/checksum_utils.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/utils/checksum_utils.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/utils/frequency_utils.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/utils/frequency_utils.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/utils/frequency_utils.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/utils/radiotap_parser.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/utils/radiotap_parser.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/utils/radiotap_parser.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/utils/radiotap_writer.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/utils/radiotap_writer.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/utils/radiotap_writer.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/utils/routing_utils.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/utils/routing_utils.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/utils/routing_utils.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/utils/resolve_utils.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/utils/resolve_utils.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/utils/resolve_utils.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/utils/pdu_utils.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/utils/pdu_utils.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/utils/pdu_utils.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/vxlan.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/vxlan.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/vxlan.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/dot11/dot11_base.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/dot11/dot11_base.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/dot11/dot11_base.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/dot11/dot11_data.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/dot11/dot11_data.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/dot11/dot11_data.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/dot11/dot11_mgmt.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/dot11/dot11_mgmt.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/dot11/dot11_mgmt.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/dot11/dot11_beacon.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/dot11/dot11_beacon.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/dot11/dot11_beacon.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/dot11/dot11_assoc.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/dot11/dot11_assoc.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/dot11/dot11_assoc.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/dot11/dot11_auth.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/dot11/dot11_auth.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/dot11/dot11_auth.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/dot11/dot11_probe.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/dot11/dot11_probe.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/dot11/dot11_probe.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/dot11/dot11_control.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/dot11/dot11_control.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/dot11/dot11_control.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/sniffer.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/sniffer.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/sniffer.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/packet_writer.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/packet_writer.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/packet_writer.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/pktap.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/pktap.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/pktap.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/tcp_stream.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/tcp_stream.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/tcp_stream.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/offline_packet_filter.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/offline_packet_filter.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/offline_packet_filter.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/src",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_PCAP_IMMEDIATE_MODE=1 -DHAVE_PCAP_TIMESTAMP_PRECISION=1 -Dtins_EXPORTS -I/Users/prince/projects/netstack/dependencies/libtins/src/../include -I/opt/local/include -I/usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fPIC -std=gnu++2b -o CMakeFiles/tins.dir/ppi.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/src/ppi.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/src/ppi.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/usr/local/homebrew/include -I/Users/prince/projects/netstack/dependencies/libtins/examples/../include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++2b -o CMakeFiles/arpspoofing.dir/arpspoofing.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/examples/arpspoofing.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/examples/arpspoofing.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/usr/local/homebrew/include -I/Users/prince/projects/netstack/dependencies/libtins/examples/../include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++2b -o CMakeFiles/route_table.dir/route_table.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/examples/route_table.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/examples/route_table.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/usr/local/homebrew/include -I/Users/prince/projects/netstack/dependencies/libtins/examples/../include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++2b -o CMakeFiles/defragmenter.dir/defragmenter.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/examples/defragmenter.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/examples/defragmenter.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/usr/local/homebrew/include -I/Users/prince/projects/netstack/dependencies/libtins/examples/../include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++2b -o CMakeFiles/arpmonitor.dir/arpmonitor.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/examples/arpmonitor.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/examples/arpmonitor.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/usr/local/homebrew/include -I/Users/prince/projects/netstack/dependencies/libtins/examples/../include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++2b -o CMakeFiles/dns_queries.dir/dns_queries.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/examples/dns_queries.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/examples/dns_queries.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/usr/local/homebrew/include -I/Users/prince/projects/netstack/dependencies/libtins/examples/../include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++2b -o CMakeFiles/dns_spoof.dir/dns_spoof.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/examples/dns_spoof.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/examples/dns_spoof.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/usr/local/homebrew/include -I/Users/prince/projects/netstack/dependencies/libtins/examples/../include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++2b -o CMakeFiles/stream_dump.dir/stream_dump.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/examples/stream_dump.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/examples/stream_dump.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/usr/local/homebrew/include -I/Users/prince/projects/netstack/dependencies/libtins/examples/../include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++2b -o CMakeFiles/icmp_responses.dir/icmp_responses.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/examples/icmp_responses.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/examples/icmp_responses.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/usr/local/homebrew/include -I/Users/prince/projects/netstack/dependencies/libtins/examples/../include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++2b -o CMakeFiles/interfaces_info.dir/interfaces_info.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/examples/interfaces_info.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/examples/interfaces_info.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/usr/local/homebrew/include -I/Users/prince/projects/netstack/dependencies/libtins/examples/../include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++2b -o CMakeFiles/tcp_connection_close.dir/tcp_connection_close.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/examples/tcp_connection_close.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/examples/tcp_connection_close.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/usr/local/homebrew/include -I/Users/prince/projects/netstack/dependencies/libtins/examples/../include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++2b -o CMakeFiles/wps_detect.dir/wps_detect.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/examples/wps_detect.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/examples/wps_detect.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DBOOST_REGEX_DYN_LINK -DBOOST_REGEX_NO_LIB -I/Users/prince/projects/netstack/dependencies/libtins/examples/../include -isystem /usr/local/homebrew/include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++2b -o CMakeFiles/http_requests.dir/http_requests.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/examples/http_requests.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/examples/http_requests.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/usr/local/homebrew/include -I/Users/prince/projects/netstack/dependencies/libtins/examples/../include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++2b -o CMakeFiles/beacon_display.dir/beacon_display.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/examples/beacon_display.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/examples/beacon_display.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/usr/local/homebrew/include -I/Users/prince/projects/netstack/dependencies/libtins/examples/../include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++2b -o CMakeFiles/traceroute.dir/traceroute.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/examples/traceroute.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/examples/traceroute.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/usr/local/homebrew/include -I/Users/prince/projects/netstack/dependencies/libtins/examples/../include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++2b -o CMakeFiles/dns_stats.dir/dns_stats.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/examples/dns_stats.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/examples/dns_stats.cpp"
+},
+{
+  "directory": "/Users/prince/projects/netstack/build/dependencies/libtins/examples",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/usr/local/homebrew/include -I/Users/prince/projects/netstack/dependencies/libtins/examples/../include  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  -Wall -Wextra -std=c++11 -O2 -g -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++2b -o CMakeFiles/portscan.dir/portscan.cpp.o -c /Users/prince/projects/netstack/dependencies/libtins/examples/portscan.cpp",
+  "file": "/Users/prince/projects/netstack/dependencies/libtins/examples/portscan.cpp"
 },
 {
   "directory": "/Users/prince/projects/netstack/build/dependencies/googletest/googlemock",
