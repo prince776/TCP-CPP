@@ -28,6 +28,7 @@ file(GLOB_RECURSE SRC_FILES "src/*.cpp")
 add_subdirectory(dependencies/expected)
 add_subdirectory(dependencies/libtuntap)
 add_subdirectory(dependencies/libtins)
+add_subdirectory(dependencies/fmt)
 set(ENABLE_CXX, ON)
 set(LIBTINS_ENABLE_CXX11, 1)
 
@@ -36,12 +37,13 @@ add_executable(netstack ${SRC_FILES})
 target_include_directories(netstack PRIVATE dependencies/expected/include)
 target_include_directories(netstack PRIVATE dependencies/libtuntap/bindings/cpp)
 target_include_directories(netstack PRIVATE dependencies/libtins/include)
+target_include_directories(netstack PRIVATE dependencies/fmt/include)
 
 target_link_libraries(netstack PRIVATE expected)
 target_link_libraries(netstack PRIVATE tuntap)
 target_link_libraries(netstack PRIVATE tuntap++)
-target_link_libraries(netstack PRIVATE 
-tins)
+target_link_libraries(netstack PRIVATE tins)
+target_link_libraries(netstack PRIVATE fmt)
 
 ######### TESTING #########
 # Add Google Test as a subdirectory

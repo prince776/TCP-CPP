@@ -13,3 +13,6 @@
 [submodule "dependencies/dependencies/expected"]
 	path = dependencies/expected
 	url = https://github.com/TartanLlama/expected.git
+[submodule "dependencies/fmt"]
+	path = dependencies/fmt
+	url = https://github.com/fmtlib/fmt.git

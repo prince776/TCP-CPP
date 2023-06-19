@@ -1,6 +1,7 @@
 #include "tins/ip.h"
 #include "tins/pdu.h"
 #include "tins/tcp.h"
+#include <fmt/core.h>
 #include <iomanip>
 #include <iostream>
 #include <stdint.h>
