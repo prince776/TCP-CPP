@@ -10,3 +10,6 @@
 [submodule "dependencies/libtins"]
 	path = dependencies/libtins
 	url = https://github.com/mfontanini/libtins.git
+[submodule "dependencies/PcapPlusPlus"]
+	path = dependencies/PcapPlusPlus
+	url = https://github.com/seladb/PcapPlusPlus.git
