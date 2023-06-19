@@ -5,11 +5,11 @@
 	path = dependencies/PcapPlusPlus
 	url = https://github.com/seladb/PcapPlusPlus.git
 [submodule "dependencies/dependencies/libtuntap"]
-	path = dependencies/dependencies/libtuntap
+	path = dependencies/libtuntap
 	url = https://github.com/LaKabane/libtuntap
 [submodule "dependencies/dependencies/googletest"]
-	path = dependencies/dependencies/googletest
+	path = dependencies/googletest
 	url = https://github.com/google/googletest.git
 [submodule "dependencies/dependencies/expected"]
-	path = dependencies/dependencies/expected
+	path = dependencies/expected
 	url = https://github.com/TartanLlama/expected.git
