@@ -18,6 +18,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
 -fsanitize=undefined \
 -D_GLIBCXX_DEBUG \
 -D_GLIBCXX_DEBUG_PEDANTIC \
+-g \
 ")
 
 set(CMAKE_CXX_STANDARD 23)
