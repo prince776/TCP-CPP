@@ -7,14 +7,55 @@
 #include <iomanip>
 #include <iostream>
 #include <stdint.h>
+#include <thread>
 #include <tl/expected.hpp>
 #include <tuntap++.hh>
+#include <unistd.h>
 
 constexpr int TunBufSize            = 1055;
 constexpr int TCPProtocolNumberInIP = 6;
 
+#include <climits>
+
+template <typename T>
+T swap_endian(T u) {
+    static_assert(CHAR_BIT == 8, "CHAR_BIT != 8");
+
+    union {
+        T u;
+        unsigned char u8[sizeof(T)];
+    } source, dest;
+
+    source.u = u;
+
+    for (size_t k = 0; k < sizeof(T); k++)
+        dest.u8[k] = source.u8[sizeof(T) - k - 1];
+
+    return dest.u;
+}
+
 int main(int, char**) {
     tuntap::tun tun;
+
+    // {
+    //     fmt::println("DO IT");
+    //     std::this_thread::sleep_for(std::chrono::milliseconds(10000));
+
+    //     Tins::TCP tcpResp;
+    //     tcpResp.sport(8050);
+    //     tcpResp.dport(8080);
+    //     tcpResp.set_flag(Tins::TCP::SYN, 1);
+    //     tcpResp.seq(0);
+
+    //     Tins::IP ipResp = Tins::IP("10.0.0.1", "10.0.0.2") / tcpResp;
+    //     ipResp.ttl(245);
+
+    //     auto respBuf = ipResp.serialize();
+    //     std::swap(respBuf[2], respBuf[3]);
+
+    //     tun.write((void*)&respBuf[0], respBuf.size());
+    //     fmt::println("Sent intial packet");
+    // }
 
     while (true) {
         char buf[TunBufSize] = {0};
@@ -53,25 +94,28 @@ int main(int, char**) {
 
         if (tcp->get_flag(Tins::TCP::SYN)) {
             fmt::println("Has syn with seq: {}", tcp->seq());
-            Tins::TCP resp(*tcp);
-            resp.sport(tcp->dport());
-            resp.dport(tcp->sport());
-            resp.set_flag(Tins::TCP::SYN, 1);
-            resp.set_flag(Tins::TCP::ACK, 1);
-            resp.seq(tcp->seq());
-            resp.ack_seq(tcp->seq() + 1);
+            Tins::TCP tcpResp;
+            tcpResp.sport(tcp->dport());
+            tcpResp.dport(tcp->sport());
+            tcpResp.set_flag(Tins::TCP::SYN, 1);
+            tcpResp.set_flag(Tins::TCP::ACK, 1);
+            tcpResp.seq(0);
+            tcpResp.ack_seq(tcp->seq() + 1);
+            tcpResp.timestamp(tcp->timestamp().first + 100,
+                              tcp->timestamp().first);
+            tcpResp.window(tcp->window());
+            if (tcp->has_sack_permitted()) {
+                tcpResp.sack_permitted();
+            }
+            tcpResp.mss(tcp->mss());
+            // tcpResp.set_flag(Tins::TCP::ECE, 1);
 
-            Tins::IP respIP = Tins::IP(ip.src_addr(), ip.dst_addr()) / resp;
-            respIP.ttl(245);
+            Tins::IP ipResp = Tins::IP(ip.src_addr(), ip.dst_addr()) / tcpResp;
+            ipResp.ttl(245);
 
-            auto respBuf = respIP.serialize();
-            fmt::println("HERE: SIZE OF RESP: {}, {}, {}, {}, {}",
-                         respIP.advertised_size(),
-                         respIP.size(),
-                         resp.advertised_size(),
-                         respIP.header_size(),
-                         resp.header_size());
+            auto respBuf = ipResp.serialize();
 
+            std::swap(respBuf[2], respBuf[3]);
             tun.write((void*)&respBuf[0], respBuf.size());
         }
     }
