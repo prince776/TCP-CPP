@@ -73,7 +73,14 @@ int main(int, char**) {
         }
         buf[readBytes] = 0;
 
-        Tins::IP ip((uint8_t*)(buf), readBytes);
+        Tins::IP ip;
+        try {
+            ip = Tins::IP((uint8_t*)(buf), readBytes);
+        } catch (...) {
+            fmt::println("Skipping non ip packet");
+            continue;
+        }
+
         if (ip.protocol() != TCPProtocolNumberInIP) {
             fmt::println("Skipping non TCP packet");
             continue;
