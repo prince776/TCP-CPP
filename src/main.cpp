@@ -129,7 +129,7 @@ int main(int, char**) {
 
             auto respBuf = ipResp.serialize();
 
-            std::swap(respBuf[2], respBuf[3]);
+            // std::swap(respBuf[2], respBuf[3]);
 
             tun.write((void*)(&respBuf[0]), respBuf.size());
             fmt::println("Sent syn ack");
