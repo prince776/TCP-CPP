@@ -73,7 +73,7 @@ int main(int, char**) {
         }
         buf[readBytes] = 0;
 
-        Tins::IP ip((uint8_t*)(buf + 4), readBytes);
+        Tins::IP ip((uint8_t*)(buf), readBytes);
         if (ip.protocol() != TCPProtocolNumberInIP) {
             fmt::println("Skipping non TCP packet");
             continue;
@@ -93,7 +93,7 @@ int main(int, char**) {
         fmt::println("Src port: {}, dest port: {}", tcp->sport(), tcp->dport());
 
         auto dataOffset = ip.header_size() + tcp->header_size();
-        fmt::println("TCP packet (size: {}):", readBytes - dataOffset - 4);
+        fmt::println("TCP packet (size: {}):", readBytes - dataOffset);
         for (size_t i = dataOffset; i < (size_t)readBytes; i++) {
             std::cout << buf[i];
         }
@@ -123,10 +123,7 @@ int main(int, char**) {
 
             std::swap(respBuf[2], respBuf[3]);
 
-            for (size_t i = 0; i < respBuf.size(); i++) {
-                buf[4 + i] = respBuf[i];
-            }
-            tun.write((void*)buf, respBuf.size() + 4);
+            tun.write((void*)(&respBuf[0]), respBuf.size());
         }
     }
 }
