@@ -65,10 +65,10 @@ int main(int, char**) {
         char buf[TunBufSize] = {0};
 
         int readBytes = tun.read(buf, TunBufSize);
-        fmt::println("Read packet of size: {}", readBytes);
         // continue;
 
         if (readBytes == -1) {
+            fmt::println("Couldn't read from tun interface");
             continue;
         }
         buf[readBytes] = 0;
@@ -106,6 +106,7 @@ int main(int, char**) {
         }
 
         if (tcp->get_flag(Tins::TCP::SYN)) {
+            fmt::println("Got syn packet");
             fmt::println("Has syn with seq: {}", tcp->seq());
             Tins::TCP tcpResp;
             tcpResp.sport(tcp->dport());
@@ -131,6 +132,7 @@ int main(int, char**) {
             std::swap(respBuf[2], respBuf[3]);
 
             tun.write((void*)(&respBuf[0]), respBuf.size());
+            fmt::println("Sent syn ack");
         }
     }
 }
