@@ -1,5 +1,8 @@
 #!/bin/bash
-
+ext=$?
+if [[ $ext -ne 0 ]]; then
+	exit $ext
+fi
 sudo ./build/netstack &
 pid=$!
 sleep 3
