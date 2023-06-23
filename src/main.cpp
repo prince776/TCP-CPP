@@ -1,3 +1,5 @@
+#include "include/tun.hpp"
+#include "tins/ethernetII.h"
 #include "tins/ip.h"
 #include "tins/packet_sender.h"
 #include "tins/pdu.h"
@@ -35,39 +37,47 @@ T swap_endian(T u) {
 }
 
 int main(int, char**) {
-    tuntap::tun tun;
+    UTun tun;
 
-    // {
-    //     fmt::println("DO IT");
-    //     std::this_thread::sleep_for(std::chrono::milliseconds(10000));
+    {
+        uint8_t buf[TunBufSize] = {0};
+        buf[3]                  = 2;
 
-    //     Tins::TCP tcpResp;
-    //     tcpResp.sport(8050);
-    //     tcpResp.dport(8080);
-    //     tcpResp.set_flag(Tins::TCP::SYN, 1);
-    //     tcpResp.seq(0);
+        fmt::println("DO IT");
+        std::this_thread::sleep_for(std::chrono::milliseconds(10000));
 
-    //     Tins::IP ipResp = Tins::IP("10.0.0.1", "10.0.0.2") / tcpResp;
-    //     ipResp.ttl(245);
+        Tins::TCP tcpResp;
+        tcpResp.sport(8050);
+        tcpResp.dport(8080);
+        tcpResp.set_flag(Tins::TCP::SYN, 1);
+        tcpResp.seq(0);
 
-    //     auto respBuf = ipResp.serialize();
-    //     std::swap(respBuf[2], respBuf[3]);
+        Tins::IP ipResp = Tins::IP("10.0.0.1", "10.0.0.2") / tcpResp;
+        ipResp.ttl(245);
 
-    //     tun.write((void*)&respBuf[0], respBuf.size());
-    //     fmt::println("Sent intial packet");
-    // }
+        auto respBuf = ipResp.serialize();
+        std::swap(respBuf[2], respBuf[3]);
+
+        for (size_t i = 0; i < respBuf.size(); i++) {
+            buf[4 + i] = respBuf[i];
+        }
+        tun.Write((void*)buf, respBuf.size() + 4);
+        fmt::println("Sent intial packet");
+    }
 
     while (true) {
         char buf[TunBufSize] = {0};
 
-        int readBytes = tun.read(buf, TunBufSize);
+        int readBytes = tun.Read(buf, TunBufSize);
+        fmt::println("Read packet of size: {}", readBytes);
+        // continue;
+
         if (readBytes == -1) {
             continue;
         }
         buf[readBytes] = 0;
 
-        Tins::IP ip((uint8_t*)buf, readBytes);
-
+        Tins::IP ip((uint8_t*)(buf + 4), readBytes);
         if (ip.protocol() != TCPProtocolNumberInIP) {
             fmt::println("Skipping non TCP packet");
             continue;
@@ -87,7 +97,7 @@ int main(int, char**) {
         fmt::println("Src port: {}, dest port: {}", tcp->sport(), tcp->dport());
 
         auto dataOffset = ip.header_size() + tcp->header_size();
-        fmt::println("TCP packet (size: {}):", readBytes - dataOffset);
+        fmt::println("TCP packet (size: {}):", readBytes - dataOffset - 4);
         for (size_t i = dataOffset; i < (size_t)readBytes; i++) {
             std::cout << buf[i];
         }
@@ -116,7 +126,11 @@ int main(int, char**) {
             auto respBuf = ipResp.serialize();
 
             std::swap(respBuf[2], respBuf[3]);
-            tun.write((void*)&respBuf[0], respBuf.size());
+
+            for (size_t i = 0; i < respBuf.size(); i++) {
+                buf[4 + i] = respBuf[i];
+            }
+            tun.Write((void*)buf, respBuf.size() + 4);
         }
     }
 }
