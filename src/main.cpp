@@ -1,10 +1,6 @@
-#include "include/tun.hpp"
-#include "tins/ethernetII.h"
 #include "tins/ip.h"
-#include "tins/packet_sender.h"
 #include "tins/pdu.h"
 #include "tins/tcp.h"
-#include "tins/utils/checksum_utils.h"
 #include <fmt/core.h>
 #include <iomanip>
 #include <iostream>
@@ -37,38 +33,38 @@ T swap_endian(T u) {
 }
 
 int main(int, char**) {
-    UTun tun;
+    tuntap::tun tun;
 
-    {
-        uint8_t buf[TunBufSize] = {0};
-        buf[3]                  = 2;
+    // {
+    //     uint8_t buf[TunBufSize] = {0};
+    //     buf[3]                  = 2;
 
-        fmt::println("DO IT");
-        std::this_thread::sleep_for(std::chrono::milliseconds(10000));
+    //     fmt::println("DO IT");
+    //     std::this_thread::sleep_for(std::chrono::milliseconds(10000));
 
-        Tins::TCP tcpResp;
-        tcpResp.sport(8050);
-        tcpResp.dport(8080);
-        tcpResp.set_flag(Tins::TCP::SYN, 1);
-        tcpResp.seq(0);
+    //     Tins::TCP tcpResp;
+    //     tcpResp.sport(8050);
+    //     tcpResp.dport(8080);
+    //     tcpResp.set_flag(Tins::TCP::SYN, 1);
+    //     tcpResp.seq(0);
 
-        Tins::IP ipResp = Tins::IP("10.0.0.1", "10.0.0.2") / tcpResp;
-        ipResp.ttl(245);
+    //     Tins::IP ipResp = Tins::IP("10.0.0.1", "10.0.0.2") / tcpResp;
+    //     ipResp.ttl(245);
 
-        auto respBuf = ipResp.serialize();
-        std::swap(respBuf[2], respBuf[3]);
+    //     auto respBuf = ipResp.serialize();
+    //     std::swap(respBuf[2], respBuf[3]);
 
-        for (size_t i = 0; i < respBuf.size(); i++) {
-            buf[4 + i] = respBuf[i];
-        }
-        tun.Write((void*)buf, respBuf.size() + 4);
-        fmt::println("Sent intial packet");
-    }
+    //     for (size_t i = 0; i < respBuf.size(); i++) {
+    //         buf[4 + i] = respBuf[i];
+    //     }
+    //     tun.Write((void*)buf, respBuf.size() + 4);
+    //     fmt::println("Sent intial packet");
+    // }
 
     while (true) {
         char buf[TunBufSize] = {0};
 
-        int readBytes = tun.Read(buf, TunBufSize);
+        int readBytes = tun.read(buf, TunBufSize);
         fmt::println("Read packet of size: {}", readBytes);
         // continue;
 
@@ -130,7 +126,7 @@ int main(int, char**) {
             for (size_t i = 0; i < respBuf.size(); i++) {
                 buf[4 + i] = respBuf[i];
             }
-            tun.Write((void*)buf, respBuf.size() + 4);
+            tun.write((void*)buf, respBuf.size() + 4);
         }
     }
 }
