@@ -40,6 +40,8 @@ target_include_directories(netstack PRIVATE dependencies/libtuntap/bindings/cpp)
 target_include_directories(netstack PRIVATE dependencies/libtins/include)
 target_include_directories(netstack PRIVATE dependencies/fmt/include)
 
+target_include_directories(netstack PRIVATE src/include)
+
 target_link_libraries(netstack PRIVATE expected)
 target_link_libraries(netstack PRIVATE tuntap)
 target_link_libraries(netstack PRIVATE tuntap++)
