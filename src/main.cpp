@@ -13,5 +13,9 @@ int main(int, char**) {
 
     tcp::ConnectionManager tcpManager(tun);
 
-    tcpManager.run();
+    std::thread rcvr(&tcp::ConnectionManager::run, &tcpManager);
+
+    while (true) {
+    }
+    rcvr.join();
 }
