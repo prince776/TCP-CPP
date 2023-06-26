@@ -1,6 +1,8 @@
 #pragma once
 
 #include "tcp.hpp"
+#include "tins/ip.h"
+#include "tins/tcp.h"
 namespace tcp {
 
 // Note: When adding new state impls, make sure to add check in connection.hpp
@@ -28,6 +30,17 @@ class SynRcvdState : public State {
   public:
     SynRcvdState() {
         stateValue = State::Value::SynRcvd;
+    }
+
+    [[nodiscard]] Value onPacket(Connection&,
+                                 const Tins::IP&,
+                                 const Tins::TCP&) const noexcept override;
+};
+
+class EstablishedState : public State {
+  public:
+    EstablishedState() {
+        stateValue = State::Value::Established;
     }
 
     [[nodiscard]] Value onPacket(Connection&,
