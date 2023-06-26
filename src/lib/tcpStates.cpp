@@ -3,6 +3,7 @@
 #include "fmt/core.h"
 #include "tcp.hpp"
 #include "tins/ip.h"
+#include "tins/rawpdu.h"
 #include "tins/tcp.h"
 
 using namespace tcp;
@@ -94,9 +95,84 @@ SynRcvdState::onPacket(Connection& conn,
 
     // If ACK, enter Established State. GG 3-way handshake done.
     if (tcp.has_flags(Tins::TCP::ACK)) {
+        conn.snd.nxt++;
         fmt::println("3 way handshake done, entering Established state.");
         return State::Value::Established;
     }
 
     // TODO: If FIN, enter CLOSE-WAIT state.
+    fmt::println("Reached unimplemented part of SynRcvd State's onPacket");
+    return stateValue;
+}
+
+[[nodiscard]] State::Value
+EstablishedState::onPacket(Connection& conn,
+                           const Tins::IP& ip,
+                           const Tins::TCP& tcp) const noexcept {
+
+    if (tcp.has_flags(Tins::TCP::RST)) {
+        fmt::println("Got RST in Established state, need to close connection "
+                     "and send RST on every snd/rcv here. Unimplemented...");
+        return stateValue;
+    }
+
+    // TODO: check security stuff.
+
+    if (tcp.has_flags(Tins::TCP::SYN)) {
+        fmt::println(
+            "Rcvd SYN in Established state, need to RST now. Unimplemented");
+        return stateValue;
+    }
+
+    if (tcp.has_flags(Tins::TCP::ACK)) {
+        fmt::println("Got ACK in Established state, should happen when we are "
+                     "sending data. Unimplemented for now so doing nothing...");
+        // return stateValue;
+    }
+
+    // TODO : check for urg bit (no not?).
+
+    // Process segement data now.
+    fmt::println("Got Data for in socket: src: {}:{} dst: {}:{}",
+                 conn.src.addr.to_string(),
+                 conn.src.port,
+                 conn.dst.addr.to_string(),
+                 conn.dst.port);
+
+    if (tcp.seq() != conn.rcv.nxt) {
+        fmt::println("Ignoring segement with seg.seq != rcv.nxt");
+        return stateValue;
+    }
+
+    auto* rawPDU = tcp.find_pdu<Tins::RawPDU>();
+
+    if (!rawPDU) {
+        fmt::print("Failed to get raw pdu from tcp");
+        return stateValue;
+    }
+    auto data = rawPDU->payload();
+    for (auto x : data) {
+        fmt::print("{}", (char)x);
+    }
+    fmt::println("");
+
+    conn.rcv.nxt += data.size();
+
+    auto tcpResp = Tins::TCP(tcp.sport(), tcp.dport());
+    tcpResp.set_flag(Tins::TCP::ACK, 1);
+    tcpResp.ack_seq(conn.rcv.nxt);
+    tcpResp.seq(conn.snd.nxt);
+
+    auto ipResp = Tins::IP(ip.src_addr(), ip.dst_addr()) / tcpResp;
+    ipResp.ttl(64);
+
+    auto resp        = ipResp.serialize();
+    int bytesWritten = conn.tun->write(resp.data(), resp.size());
+    if (bytesWritten == -1) {
+        fmt::print(
+            "Failed to send ACK after receiving data in Established state");
+        return stateValue;
+    }
+
+    return stateValue;
 }

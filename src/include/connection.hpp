@@ -117,6 +117,9 @@ class Connection {
         case State::Value::SynRcvd:
             state.reset(new SynRcvdState());
             break;
+        case State::Value::Established:
+            state.reset(new EstablishedState());
+            break;
         default:
             state.reset(new ClosedState());
             break;
