@@ -1,5 +1,6 @@
 #include "connection.hpp"
 #include "socket.hpp"
+#include "tins/ip.h"
 #include "tins/ip_address.h"
 #include <fmt/core.h>
 #include <iomanip>
@@ -25,6 +26,7 @@ int main(int, char**) {
     fmt::println("Command Manual:");
     fmt::println("send:<dst ipAddr>:<dst port>:<src port>:<data to send>");
     fmt::println("reply:<text>");
+    fmt::println("connect:<ip>:<port>:<src port>");
     fmt::println("");
 
     tcp::ConnectionManager tcpManager(tun, HostIP);
@@ -57,6 +59,23 @@ int main(int, char**) {
 
                 tcpManager.send(socketPair, line);
                 continue;
+            }
+            if (line.starts_with("connect:")) {
+                auto tokens = splitString(line, ":");
+                if (tokens.size() == 4) {
+                    auto sip       = HostIP;
+                    auto dip       = Tins::IPv4Address(tokens[1]);
+                    uint16_t dport = std::stoi(tokens[2]);
+                    uint16_t sport = std::stoi(tokens[3]);
+
+                    tcp::SocketPair socketPair{
+                        .src = {sip, sport},
+                        .dst = {dip, dport},
+                    };
+
+                    tcpManager.open(socketPair);
+                    continue;
+                }
             }
         } catch (...) {
         }

@@ -174,3 +174,18 @@ void ConnectionManager::send(const SocketPair& connSockets,
     auto& conn = connections[connSockets];
     return conn.send(data, threadPool);
 }
+
+void ConnectionManager::open(const SocketPair& connSockets) noexcept {
+    if (connections.contains(connSockets)) {
+        fmt::println("Error: Connection already exists");
+        return;
+    }
+
+    connections.emplace(
+        std::piecewise_construct,
+        std::forward_as_tuple(connSockets),
+        std::forward_as_tuple(connSockets.src, connSockets.dst, tun));
+
+    auto& conn = connections[connSockets];
+    return conn.open();
+}

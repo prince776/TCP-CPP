@@ -257,3 +257,83 @@ EstablishedState::onSend(Connection& conn,
 
     return stateValue;
 }
+
+[[nodiscard]] State::Value
+ListenState::onOpen(Connection& conn) const noexcept {
+    std::scoped_lock lock(conn.connDataMutex);
+
+    if (!conn.src.port || !conn.dst.port) {
+        fmt::println("Can't open partial connection actively");
+        return stateValue;
+    }
+
+    Tins::TCP tcpResp(conn.dst.port, conn.src.port);
+    tcpResp.set_flag(Tins::TCP::SYN, 1);
+    tcpResp.seq(conn.snd.nxt);
+    tcpResp.window(conn.snd.wnd);
+
+    Tins::IP ipResp = Tins::IP(conn.dst.addr, conn.src.addr) / tcpResp;
+    ipResp.ttl(64);
+
+    auto resp = ipResp.serialize();
+
+    int bytesWritten = conn.tun->write(resp.data(), resp.size());
+    if (bytesWritten == -1) {
+        fmt::println("Failed to sent SYN due to tun problem");
+        return stateValue;
+    }
+    return State::Value::SynSent;
+}
+
+[[nodiscard]] State::Value
+SynSentState::onPacket(Connection& conn,
+                       const Tins::IP& ip,
+                       const Tins::TCP& tcp) const noexcept {
+    std::scoped_lock lock(conn.connDataMutex);
+
+    // TODO :Check ACK, RST, Security bits.
+    if (!tcp.has_flags(Tins::TCP::SYN | Tins::TCP::ACK)) {
+        debug::println(
+            "SYN or ACK not set in SynSent state. Unimplemeneted...");
+        return stateValue;
+    }
+
+    // if (!conn.isPacketValid(tcp)) {
+    //     fmt::println("Got invalid packet in SynSent State");
+    //     return stateValue;
+    // }
+
+    if (tcp.ack_seq() <= conn.snd.iss) {
+        debug::println("Bad ACK packet, ignoring (unimplemented)");
+        return stateValue;
+    }
+
+    conn.rcv.nxt = tcp.seq() + 1;
+    conn.rcv.irs = tcp.seq();
+    conn.rcv.wnd = tcp.window();
+
+    conn.snd.una = tcp.ack_seq();
+    conn.snd.nxt = conn.snd.una;
+
+    Tins::TCP tcpResp(conn.dst.port, conn.src.port);
+    tcpResp.set_flag(Tins::TCP::ACK, 1);
+    tcpResp.ack_seq(conn.rcv.nxt);
+    tcpResp.seq(conn.snd.nxt);
+
+    Tins::IP ipResp = Tins::IP(conn.dst.addr, conn.src.addr) / tcpResp;
+    ipResp.ttl(64);
+    auto resp = ipResp.serialize();
+
+    int bytesWritten = conn.tun->write(resp.data(), resp.size());
+    if (bytesWritten == -1) {
+        fmt::println("Failed to sent SYN due to tun problem");
+        conn.snd.nxt = conn.snd.iss;
+        conn.snd.una = conn.snd.iss;
+        return stateValue;
+    }
+    fmt::println("Connection Established with: {}:{} at port: {}",
+                 conn.dst.addr.to_string(),
+                 conn.dst.port,
+                 conn.src.port);
+    return State::Value::Established;
+}

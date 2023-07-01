@@ -128,6 +128,9 @@ class Connection {
         case State::Value::Listen:
             state.reset(new ListenState());
             break;
+        case State::Value::SynSent:
+            state.reset(new SynSentState());
+            break;
         case State::Value::SynRcvd:
             state.reset(new SynRcvdState());
             break;
@@ -155,6 +158,8 @@ class ConnectionManager {
     void run() noexcept;
 
     void send(const SocketPair& connSockets, const std::string& data) noexcept;
+
+    void open(const SocketPair& connSockets) noexcept;
 
     [[nodiscard]] SocketPair getLastRecv() const noexcept {
         return lastRvcd;

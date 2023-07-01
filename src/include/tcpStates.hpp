@@ -16,6 +16,18 @@ class ClosedState : public State {
     }
 };
 
+class SynSentState : public State {
+
+  public:
+    SynSentState() {
+        stateValue = State::Value::SynSent;
+    }
+
+    [[nodiscard]] Value onPacket(Connection&,
+                                 const Tins::IP&,
+                                 const Tins::TCP&) const noexcept override;
+};
+
 class ListenState : public State {
   public:
     ListenState() {
@@ -25,6 +37,7 @@ class ListenState : public State {
     [[nodiscard]] Value onPacket(Connection&,
                                  const Tins::IP&,
                                  const Tins::TCP&) const noexcept override;
+    [[nodiscard]] Value onOpen(Connection&) const noexcept override;
 };
 
 class SynRcvdState : public State {
