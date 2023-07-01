@@ -3,10 +3,12 @@
 #include "fmt/core.h"
 #include "socket.hpp"
 #include "tcp.hpp"
+#include "threadPool.hpp"
 #include "tins/ip.h"
 #include "tins/tcp.h"
 #include <stdexcept>
 #include <stdint.h>
+#include <tuple>
 #include <utility>
 
 using namespace tcp;
@@ -58,10 +60,18 @@ void ConnectionManager::run() noexcept {
         // Fully parsed tcp, now work with it.
         Socket srcSocket      = {ip.src_addr(), tcp->sport()};
         Socket dstSocket      = {ip.dst_addr(), tcp->dport()};
-        SocketPair socketPair = {srcSocket, dstSocket};
+        SocketPair socketPair = {
+            dstSocket,
+            srcSocket,
+        };
+        lastRvcd = socketPair;
         if (!connections.contains(socketPair)) {
-            connections[socketPair] =
-                Connection(srcSocket, dstSocket, tun, *tcp);
+            connections.emplace(std::piecewise_construct,
+                                std::forward_as_tuple(socketPair),
+                                std::forward_as_tuple(socketPair.src,
+                                                      socketPair.dst,
+                                                      tun,
+                                                      *tcp));
         }
 
         auto& conn = connections[socketPair];
@@ -152,4 +162,15 @@ Connection::isPacketValid(const Tins::TCP& tcp) const noexcept {
     }
 
     return true;
+}
+
+void ConnectionManager::send(const SocketPair& connSockets,
+                             const std::string& data) noexcept {
+    if (!connections.contains(connSockets)) {
+        fmt::println("Error: Connection does not exist");
+        return;
+    }
+
+    auto& conn = connections[connSockets];
+    return conn.send(data, threadPool);
 }
