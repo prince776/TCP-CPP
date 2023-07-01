@@ -105,9 +105,10 @@ SynRcvdState::onPacket(Connection& conn,
     // If ACK, enter Established State. GG 3-way handshake done.
     if (tcp.has_flags(Tins::TCP::ACK)) {
         conn.snd.nxt++;
-        fmt::println("Connection Established with: {}:{}",
+        fmt::println("Connection Established with: {}:{} at port: {}",
                      ip.src_addr().to_string(),
-                     tcp.sport());
+                     tcp.sport(),
+                     tcp.dport());
         return State::Value::Established;
     }
 
