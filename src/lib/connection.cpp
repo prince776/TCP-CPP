@@ -1,11 +1,14 @@
 #include "connection.hpp"
+#include "debug.hpp"
 #include "fmt/core.h"
 #include "socket.hpp"
 #include "tcp.hpp"
+#include "threadPool.hpp"
 #include "tins/ip.h"
 #include "tins/tcp.h"
 #include <stdexcept>
 #include <stdint.h>
+#include <tuple>
 #include <utility>
 
 using namespace tcp;
@@ -23,42 +26,52 @@ void ConnectionManager::run() noexcept {
         try {
             ip = Tins::IP((uint8_t*)readBuf, readBytes);
         } catch (...) {
-            fmt::println("Skipping non ip packet");
+            debug::println("Skipping non ip packet");
             continue;
         }
 
         if (ip.protocol() != ProtocolNumInIP) {
-            fmt::print("Skipping non TCP packet");
+            debug::println("Skipping non TCP packet");
             continue;
         }
 
-        fmt::println("");
-        fmt::println("Rcvd ip packet. Src: {}, Dst: {}, protocol: TCP",
-                     ip.src_addr().to_string(),
-                     ip.dst_addr().to_string());
-        fmt::println("Payload size: {}", ip.advertised_size());
+        debug::println("");
+        debug::println("Rcvd ip packet. Src: {}, Dst: {}, protocol: TCP",
+                       ip.src_addr().to_string(),
+                       ip.dst_addr().to_string());
+        debug::println("Payload size: {}", ip.advertised_size());
 
         const auto* tcp = ip.find_pdu<Tins::TCP>();
         if (!tcp) {
-            fmt::println("Failed to parse tcp packet, skipping...");
+            debug::println("Failed to parse tcp packet, skipping...");
             continue;
         }
 
-        fmt::println("Src port: {}, Dst port: {}", tcp->sport(), tcp->dport());
+        debug::println("Src port: {}, Dst port: {}",
+                       tcp->sport(),
+                       tcp->dport());
 
         auto dataOffset = ip.header_size() + tcp->header_size();
-        fmt::println("TCP packet (size: {}):", readBytes - dataOffset);
+        debug::println("TCP packet (size: {}):", readBytes - dataOffset);
         for (size_t i = dataOffset; i < (size_t)readBytes; i++) {
-            fmt::print("{}", readBuf[i]);
+            debug::print("{}", readBuf[i]);
         }
 
         // Fully parsed tcp, now work with it.
         Socket srcSocket      = {ip.src_addr(), tcp->sport()};
         Socket dstSocket      = {ip.dst_addr(), tcp->dport()};
-        SocketPair socketPair = {srcSocket, dstSocket};
+        SocketPair socketPair = {
+            dstSocket,
+            srcSocket,
+        };
+        lastRvcd = socketPair;
         if (!connections.contains(socketPair)) {
-            connections[socketPair] =
-                Connection(srcSocket, dstSocket, tun, *tcp);
+            connections.emplace(std::piecewise_construct,
+                                std::forward_as_tuple(socketPair),
+                                std::forward_as_tuple(socketPair.src,
+                                                      socketPair.dst,
+                                                      tun,
+                                                      *tcp));
         }
 
         auto& conn = connections[socketPair];
@@ -104,7 +117,7 @@ Connection::isPacketValid(const Tins::TCP& tcp) const noexcept {
     if (tcp.has_flags(Tins::TCP::ACK)) {
         // Validate: SND.UNA < SEG.ACK =< SND.NXT.
         if (!validateAckSeqNums(snd.una, tcp.ack_seq(), snd.nxt)) {
-            fmt::println("Failed to validate ack seq num check for packet");
+            debug::println("Failed to validate ack seq num check for packet");
             return false;
         }
     }
@@ -120,7 +133,7 @@ Connection::isPacketValid(const Tins::TCP& tcp) const noexcept {
 
     if (segLen == 0 && rcv.wnd == 0) {
         if (seqStart != rcv.nxt) {
-            fmt::println("segLen = 0, rcv.wnd = 0 but seqStart != rcv.nxt");
+            debug::println("segLen = 0, rcv.wnd = 0 but seqStart != rcv.nxt");
             return false;
         }
     }
@@ -133,7 +146,7 @@ Connection::isPacketValid(const Tins::TCP& tcp) const noexcept {
     }
 
     if (segLen > 0 && rcv.wnd == 0) {
-        fmt::println("segLen > 0 but rcv.wnd = 0, not possible");
+        debug::println("segLen > 0 but rcv.wnd = 0, not possible");
         return false;
     }
 
@@ -142,10 +155,22 @@ Connection::isPacketValid(const Tins::TCP& tcp) const noexcept {
         can |= validateRcvSeqNums(rcv.nxt, seqStart, rcv.nxt + rcv.wnd);
         can |= validateRcvSeqNums(rcv.nxt, seqEnd, rcv.nxt + rcv.wnd);
         if (!can) {
-            fmt::println("segLen > 0 and rcv.wnd > 0, validation check failed");
+            debug::println(
+                "segLen > 0 and rcv.wnd > 0, validation check failed");
             return false;
         }
     }
 
     return true;
+}
+
+void ConnectionManager::send(const SocketPair& connSockets,
+                             const std::string& data) noexcept {
+    if (!connections.contains(connSockets)) {
+        fmt::println("Error: Connection does not exist");
+        return;
+    }
+
+    auto& conn = connections[connSockets];
+    return conn.send(data, threadPool);
 }

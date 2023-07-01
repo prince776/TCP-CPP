@@ -4,12 +4,17 @@
 #include "socket.hpp"
 #include "tcp.hpp"
 #include "tcpStates.hpp"
+#include "threadPool.hpp"
 #include "tins/ip.h"
+#include "tins/ip_address.h"
 #include "tins/tcp.h"
 #include "tuntap++.hh"
 #include <functional>
 #include <memory>
+#include <mutex>
 #include <stdint.h>
+#include <string>
+using namespace std::chrono_literals;
 
 namespace tcp {
 
@@ -27,7 +32,7 @@ struct SendSeqSpace {
     }
 
     [[nodiscard]] static uint16_t genWND() noexcept {
-        return 1024;
+        return 10240;
     }
 };
 
@@ -40,11 +45,15 @@ struct RcvSeqSpace {
 
 // Connection represents state of a tcp connection.
 class Connection {
+
     // For this impl, all ports are assumed to be listening.
     using InitState = ListenState;
 
+    constexpr static int BufSize = 1024;
+
   public:
-    Connection() = default;
+    constexpr static auto TCPRetransmissionTime = 1s;
+    Connection()                                = default;
 
     Connection(Socket src, Socket dst, tuntap::tun& tun)
         : state(std::make_unique<InitState>()), tun(&tun), src(src), dst(dst) {
@@ -85,6 +94,10 @@ class Connection {
         switchState(state->onPacket(*this, ip, tcp));
     }
 
+    void send(const std::string& data, ThreadPool& threadPool) noexcept {
+        switchState(state->onSend(*this, data, threadPool));
+    }
+
     [[nodiscard]] bool isPacketValid(const Tins::TCP& tcp) const noexcept;
 
   private:
@@ -98,6 +111,7 @@ class Connection {
 
     SendSeqSpace snd;
     RcvSeqSpace rcv;
+    std::mutex connDataMutex;
 
     constexpr static uint8_t DefaultTTL = 64;
 
@@ -134,10 +148,17 @@ class ConnectionManager {
   public:
     // ConnectionManager takes reference to tun and expects the reference to
     // stay alive as long as ConnectionManager is in scope.
-    ConnectionManager(tuntap::tun& tun) noexcept : connections(), tun(tun) {
+    ConnectionManager(tuntap::tun& tun, const Tins::IPv4Address& tunIP) noexcept
+        : connections(), tun(tun), tunIP(tunIP), threadPool(ThreadPoolSize) {
     }
 
     void run() noexcept;
+
+    void send(const SocketPair& connSockets, const std::string& data) noexcept;
+
+    [[nodiscard]] SocketPair getLastRecv() const noexcept {
+        return lastRvcd;
+    }
 
   private:
     std::unordered_map<SocketPair, Connection> connections;
@@ -145,9 +166,14 @@ class ConnectionManager {
     // and also allows utun. Not needed rn since not supporting macos right
     // now (since I can't get ifconfig to set up tun properly).
     std::reference_wrapper<tuntap::tun> tun;
+    Tins::IPv4Address tunIP;
+
+    SocketPair lastRvcd;
 
   private:
-    constexpr static size_t TunBufSize = 1055;
+    constexpr static size_t TunBufSize     = 1055;
+    constexpr static size_t ThreadPoolSize = 10;
+    ThreadPool threadPool;
 };
 
 } // namespace tcp

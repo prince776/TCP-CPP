@@ -1,6 +1,7 @@
 #pragma once
 
 #include "tcp.hpp"
+#include "threadPool.hpp"
 #include "tins/ip.h"
 #include "tins/tcp.h"
 namespace tcp {
@@ -46,6 +47,10 @@ class EstablishedState : public State {
     [[nodiscard]] Value onPacket(Connection&,
                                  const Tins::IP&,
                                  const Tins::TCP&) const noexcept override;
+
+    [[nodiscard]] Value onSend(Connection&,
+                               const std::string&,
+                               ThreadPool&) const noexcept override;
 };
 
 } // namespace tcp

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "threadPool.hpp"
 #include "tins/ip.h"
 #include "tins/tcp.h"
 #include <map>
@@ -25,6 +26,11 @@ class State {
     }
     [[nodiscard]] virtual Value
     onPacket(Connection&, const Tins::IP&, const Tins::TCP&) const noexcept {
+        return stateValue;
+    }
+    [[nodiscard]] virtual Value onSend(Connection& conn,
+                                       const std::string& data,
+                                       ThreadPool& threadPool) const noexcept {
         return stateValue;
     }
 

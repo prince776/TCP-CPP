@@ -1,10 +1,16 @@
 #include "tcpStates.hpp"
 #include "connection.hpp"
+#include "debug.hpp"
 #include "fmt/core.h"
 #include "tcp.hpp"
+#include "threadPool.hpp"
 #include "tins/ip.h"
 #include "tins/rawpdu.h"
 #include "tins/tcp.h"
+#include <mutex>
+#include <stdint.h>
+#include <string>
+#include <thread>
 
 using namespace tcp;
 
@@ -12,29 +18,30 @@ using namespace tcp;
 ListenState::onPacket(Connection& conn,
                       const Tins::IP& ip,
                       const Tins::TCP& tcp) const noexcept {
+    std::scoped_lock lock(conn.connDataMutex);
     // If not a valid packet we do nothing.
     if (!conn.isPacketValid(tcp)) {
-        fmt::println("Dropping tcp packet due to failing validity check");
+        debug::println("Dropping tcp packet due to failing validity check");
         return stateValue;
     }
 
     // Ignore RST packets.
     if (tcp.get_flag(Tins::TCP::RST)) {
-        fmt::println("Rcvd RST in Listen State, ignoring...");
+        debug::println("Rcvd RST in Listen State, ignoring...");
         return stateValue;
     }
 
     // If ACK, send reset, since it is probably from a packet from prev
     // connection.
     if (tcp.get_flag(Tins::TCP::ACK)) {
-        fmt::println("Rcvd ACK in Listen State, unimplemented...");
+        debug::println("Rcvd ACK in Listen State, unimplemented...");
         // TODO: create a RST and send.
         return stateValue;
     }
 
     // By this point, getting non SYN should be unlikely but if so, drop it.
     if (!tcp.get_flag(Tins::TCP::SYN)) [[unlikely]] {
-        fmt::println("Rcvd weird packed in Listen State, ignoring...");
+        debug::println("Rcvd weird packed in Listen State, ignoring...");
         return stateValue;
     }
 
@@ -60,7 +67,7 @@ ListenState::onPacket(Connection& conn,
 
     int numWrite = conn.tun->write(resp.data(), resp.size());
     if (numWrite != -1) {
-        fmt::println("Sent SYN-ACK reply TO SYN");
+        debug::println("Sent SYN-ACK reply TO SYN");
     }
     return State::Value::SynRcvd;
 }
@@ -69,9 +76,10 @@ ListenState::onPacket(Connection& conn,
 SynRcvdState::onPacket(Connection& conn,
                        const Tins::IP& ip,
                        const Tins::TCP& tcp) const noexcept {
+    std::scoped_lock lock(conn.connDataMutex);
     // If not a valid packet, send RST.
     if (!conn.isPacketValid(tcp)) {
-        fmt::println(
+        debug::println(
             "Invalid packet in SynRcvd State. Unimplemented, need to send RST");
         // TODO: Send RST.
         return stateValue;
@@ -79,7 +87,7 @@ SynRcvdState::onPacket(Connection& conn,
 
     // TODO: If RST bit, close connection.
     if (tcp.has_flags(Tins::TCP::RST)) {
-        fmt::println(
+        debug::println(
             "RST rcvd in SyncRecd State. Unimplemented, need to close here");
         return stateValue;
     }
@@ -88,20 +96,23 @@ SynRcvdState::onPacket(Connection& conn,
 
     // If SYN, it is wrong, send RST and close.
     if (tcp.has_flags(Tins::TCP::SYN)) {
-        fmt::println("SYN recvd in SynRcvd State. Unimplemented, need to sent "
-                     "RST and close here.");
+        debug::println(
+            "SYN recvd in SynRcvd State. Unimplemented, need to sent "
+            "RST and close here.");
         return stateValue;
     }
 
     // If ACK, enter Established State. GG 3-way handshake done.
     if (tcp.has_flags(Tins::TCP::ACK)) {
         conn.snd.nxt++;
-        fmt::println("3 way handshake done, entering Established state.");
+        fmt::println("Connection Established with: {}:{}",
+                     ip.src_addr().to_string(),
+                     tcp.sport());
         return State::Value::Established;
     }
 
     // TODO: If FIN, enter CLOSE-WAIT state.
-    fmt::println("Reached unimplemented part of SynRcvd State's onPacket");
+    debug::println("Reached unimplemented part of SynRcvd State's onPacket");
     return stateValue;
 }
 
@@ -109,52 +120,59 @@ SynRcvdState::onPacket(Connection& conn,
 EstablishedState::onPacket(Connection& conn,
                            const Tins::IP& ip,
                            const Tins::TCP& tcp) const noexcept {
+    std::scoped_lock lock(conn.connDataMutex);
+    // If not a valid packet, send RST.
+    if (!conn.isPacketValid(tcp)) {
+        debug::println("Invalid packet in Established State. Unimplemented, "
+                       "need to send RST");
+        // TODO: Send RST.
+        return stateValue;
+    }
 
     if (tcp.has_flags(Tins::TCP::RST)) {
-        fmt::println("Got RST in Established state, need to close connection "
-                     "and send RST on every snd/rcv here. Unimplemented...");
+        debug::println("Got RST in Established state, need to close connection "
+                       "and send RST on every snd/rcv here. Unimplemented...");
         return stateValue;
     }
 
     // TODO: check security stuff.
 
     if (tcp.has_flags(Tins::TCP::SYN)) {
-        fmt::println(
+        debug::println(
             "Rcvd SYN in Established state, need to RST now. Unimplemented");
         return stateValue;
     }
 
     if (tcp.has_flags(Tins::TCP::ACK)) {
-        fmt::println("Got ACK in Established state, should happen when we are "
-                     "sending data. Unimplemented for now so doing nothing...");
-        // return stateValue;
+        conn.snd.una = tcp.ack_seq();
     }
 
     // TODO : check for urg bit (no not?).
 
     // Process segement data now.
-    fmt::println("Got Data for in socket: src: {}:{} dst: {}:{}",
-                 conn.src.addr.to_string(),
-                 conn.src.port,
-                 conn.dst.addr.to_string(),
-                 conn.dst.port);
+    debug::println("Got Data for in socket: src: {}:{} dst: {}:{}",
+                   conn.src.addr.to_string(),
+                   conn.src.port,
+                   conn.dst.addr.to_string(),
+                   conn.dst.port);
 
     if (tcp.seq() != conn.rcv.nxt) {
-        fmt::println("Ignoring segement with seg.seq != rcv.nxt");
+        debug::println("Ignoring segement with seg.seq != rcv.nxt");
         return stateValue;
     }
 
     auto* rawPDU = tcp.find_pdu<Tins::RawPDU>();
 
     if (!rawPDU) {
-        fmt::print("Failed to get raw pdu from tcp");
+        debug::println("Failed to get raw pdu from tcp");
         return stateValue;
     }
+
+    fmt::print("{}:{} > ", ip.src_addr().to_string(), tcp.sport());
     auto data = rawPDU->payload();
     for (auto x : data) {
         fmt::print("{}", (char)x);
     }
-    fmt::println("");
 
     conn.rcv.nxt += data.size();
 
@@ -169,10 +187,71 @@ EstablishedState::onPacket(Connection& conn,
     auto resp        = ipResp.serialize();
     int bytesWritten = conn.tun->write(resp.data(), resp.size());
     if (bytesWritten == -1) {
-        fmt::print(
+        debug::print(
             "Failed to send ACK after receiving data in Established state");
         return stateValue;
     }
+
+    return stateValue;
+}
+
+[[nodiscard]] State::Value
+EstablishedState::onSend(Connection& conn,
+                         const std::string& data,
+                         ThreadPool& threadPool) const noexcept {
+    Tins::RawPDU rawData((uint8_t*)data.data(), data.size());
+    Tins::TCP tcpResp = Tins::TCP(conn.dst.port, conn.src.port);
+    tcpResp.set_flag(Tins::TCP::ACK, 1);
+    tcpResp.set_flag(Tins::TCP::PSH, 1);
+
+    // Make sure that on every retry, we send with same sequence number.
+    std::unique_lock lock(conn.connDataMutex);
+    // lock.lock();
+    auto sentSeqNum = conn.snd.nxt;
+    conn.snd.nxt += data.size();
+
+    tcpResp.seq(sentSeqNum);
+    lock.unlock();
+
+    auto task = [&]() {
+        bool transmitted = false;
+        int maxRetryies = 7, retries = 0;
+        while (!transmitted && retries < maxRetryies) {
+            if (retries > 0) {
+                fmt::println("Retring send for {} time", retries);
+            }
+            lock.lock();
+            tcpResp.ack_seq(conn.rcv.nxt);
+
+            auto ipResp =
+                Tins::IP(conn.dst.addr, conn.src.addr) / tcpResp / rawData;
+            ipResp.ttl(64);
+
+            auto resp = ipResp.serialize();
+
+            int bytesWritten = conn.tun->write(resp.data(), resp.size());
+            lock.unlock();
+
+            if (bytesWritten == -1) {
+                debug::println("Failed to send Seg in Established state during "
+                               "onSend call");
+                return;
+            }
+
+            std::this_thread::sleep_for(Connection::TCPRetransmissionTime);
+
+            lock.lock();
+            if (conn.snd.una >= sentSeqNum + data.size()) {
+                transmitted = true;
+            }
+            lock.unlock();
+
+            retries++;
+        }
+    };
+
+    auto res = threadPool.pushTask(task);
+    res.get(); // TODO: WHAT EVEN. WHY IS THIS REQUIRED?
 
     return stateValue;
 }

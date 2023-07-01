@@ -1,6 +1,6 @@
 #pragma once
 
-#include "fmt/core.h"
+#include "debug.hpp"
 #include <errno.h>
 #include <net/if_utun.h>
 #include <stdio.h>
@@ -23,19 +23,20 @@ class UTun {
         if (strlcpy(ctlInfo.ctl_name,
                     UTUN_CONTROL_NAME,
                     sizeof(UTUN_CONTROL_NAME)) >= sizeof(ctlInfo.ctl_name)) {
-            fmt::println("[UTUN]: UTUN_CONTROL_NAME too long");
+
+            debug::println("[UTUN]: UTUN_CONTROL_NAME too long");
             return;
         }
 
         fd = socket(PF_SYSTEM, SOCK_DGRAM, SYSPROTO_CONTROL);
 
         if (fd == -1) {
-            fmt::println("[UTUN]: error opening socket");
+            debug::println("[UTUN]: error opening socket");
             return;
         }
 
         if (ioctl(fd, CTLIOCGINFO, &ctlInfo) == -1) {
-            fmt::println("[UTUN]: ioctl error");
+            debug::println("[UTUN]: ioctl error");
             close(fd);
             return;
         }
@@ -47,18 +48,18 @@ class UTun {
         sc.sc_unit    = 10; // utunX where X is sc.sc_unit -1
 
         if (connect(fd, (sockaddr*)&sc, sizeof(sc)) == -1) {
-            fmt::println("[UTUN]: connect failed");
+            debug::println("[UTUN]: connect failed");
             close(fd);
             return;
         }
 
-        fmt::println("[UTUN]: Init done, file descriptor is: {}", fd);
+        debug::println("[UTUN]: Init done, file descriptor is: {}", fd);
     }
 
     int Read(void* buf, size_t len) {
         int n = read(fd, buf, len);
         if (n == -1) {
-            fmt::println("[UTUN]: Couldn't read from utun");
+            debug::println("[UTUN]: Couldn't read from utun");
         }
         return n;
     }
@@ -66,7 +67,7 @@ class UTun {
     int Write(void* buf, size_t len) {
         int n = write(fd, buf, len);
         if (n == -1) {
-            fmt::println("[UTUN]: Couldn't write to utun");
+            debug::println("[UTUN]: Couldn't write to utun");
         }
         return n;
     }
