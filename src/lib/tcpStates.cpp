@@ -200,21 +200,21 @@ EstablishedState::onPacket(Connection& conn,
 EstablishedState::onSend(Connection& conn,
                          const std::string& data,
                          ThreadPool& threadPool) const noexcept {
-    Tins::RawPDU rawData((uint8_t*)data.data(), data.size());
-    Tins::TCP tcpResp = Tins::TCP(conn.dst.port, conn.src.port);
-    tcpResp.set_flag(Tins::TCP::ACK, 1);
-    tcpResp.set_flag(Tins::TCP::PSH, 1);
+    auto task = [&conn, data]() {
+        Tins::RawPDU rawData((uint8_t*)data.data(), data.size());
+        Tins::TCP tcpResp = Tins::TCP(conn.dst.port, conn.src.port);
+        tcpResp.set_flag(Tins::TCP::ACK, 1);
+        tcpResp.set_flag(Tins::TCP::PSH, 1);
 
-    // Make sure that on every retry, we send with same sequence number.
-    std::unique_lock lock(conn.connDataMutex);
-    // lock.lock();
-    auto sentSeqNum = conn.snd.nxt;
-    conn.snd.nxt += data.size();
+        // Make sure that on every retry, we send with same sequence number.
+        std::unique_lock lock(conn.connDataMutex);
+        // lock.lock();
+        auto sentSeqNum = conn.snd.nxt;
+        conn.snd.nxt += data.size();
 
-    tcpResp.seq(sentSeqNum);
-    lock.unlock();
+        tcpResp.seq(sentSeqNum);
+        lock.unlock();
 
-    auto task = [&]() {
         bool transmitted = false;
         int maxRetryies = 7, retries = 0;
         while (!transmitted && retries < maxRetryies) {
@@ -252,7 +252,8 @@ EstablishedState::onSend(Connection& conn,
     };
 
     auto res = threadPool.pushTask(task);
-    res.get(); // TODO: WHAT EVEN. WHY IS THIS REQUIRED?
+    // res.get(); // TODO: WHAT EVEN. WHY IS THIS REQUIRED? Welp, as it turns
+    // out, I was passing local references to lambda, gg.
 
     return stateValue;
 }
